@@ -2,6 +2,7 @@
 
 :root{
     --hl-primary: #2aeb5e;
+    --card-bg: #C1C1C172;
 }
 
 *{
@@ -13,4 +14,16 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: black;
     color: white;
+}
+
+.centered{
+    text-align: center;
+}
+
+h1{
+    font-size: 4rem;
+    color: var(--hl-primary);
+}
+h2{
+    font-size: 2rem;
 }

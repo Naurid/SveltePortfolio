@@ -3,22 +3,28 @@
 </script>
 
 
-<div class="profile-container">
+<div class="profile-container" id="Profile">
 	<div class="img-container">
-		<img src={Portrait}/>
+		<img src={Portrait} alt="very handsome man with a big smile"/>
 	</div>
 	<div class="text-container">
 		<h1>Hey, it's <span>Gabor</span></h1>
 		<h3 class="typing-text">I am a <span> </span></h3>
-		<p>I’m a motivated and versatile professional with experience mostly in C# in Unity. I bring strong skills in problem-solving, teamwork, and communication, and I’m always looking for ways to contribute and grow. I’m passionate about learning new things and taking on challenges. I’m excited to bring my adaptable mindset and drive to a new opportunity.</p>
+		<p>I’m a motivated and versatile professional with experience mostly in C# in Unity and the .Net environment.
+			I bring strong skills in problem-solving, teamwork, and communication, and I’m always looking for ways to contribute and grow.
+			I’m passionate about learning new things and taking on challenges.
+			I’m excited to bring my adaptable mindset and drive to a new opportunity.
+		</p>
 	</div>
+
 </div>
 
 <style>
 	.profile-container {
 			display: flex;
-			width: 100vw;
+			width: 100%;
 			height: 100vh;
+			padding: 5rem;
 	}
 
 	.img-container{

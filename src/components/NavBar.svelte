@@ -6,10 +6,10 @@
 	</div>
 	<div class="links">
 		<div class="link">
-			<a>Home</a>
+			<a href="#Profile">Home</a>
 		</div>
 		<div class="link">
-			<a>Skills</a>
+			<a href="#Skills">Skills</a>
 		</div>
 		<div class="link">
 			<a>Education</a>
@@ -37,6 +37,7 @@
 			width: 100vw;
 			height: 5vh;
       background-color: #3d3c3c;
+			z-index: 999999999;
 	}
 
 	.brand,
@@ -63,6 +64,8 @@
 	}
 
 	nav a{
+			color: white;
+			text-decoration: none;
 			transition: all .3s ease-in-out;
 			&:hover{
 					cursor: pointer;
