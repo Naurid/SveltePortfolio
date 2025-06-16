@@ -7,5 +7,7 @@
 <style>
 	.container{
 			width: 100%;
+			height: fit-content;
+			position: relative;
 	}
 </style>
