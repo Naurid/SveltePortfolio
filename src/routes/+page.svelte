@@ -22,5 +22,5 @@
 <Projects/>
 <Separator height=50 />
 <ContactForm/>
-<Separator height=50 />
+<Separator height=150 />
 <Footer/>

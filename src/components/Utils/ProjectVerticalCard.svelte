@@ -30,8 +30,9 @@
 	}
 
 	.project-container img{
-			width: 50rem;
+			width: 65rem;
 			height: auto;
+			object-fit: contain;
 	}
 
 	.description {

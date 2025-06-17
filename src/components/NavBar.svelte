@@ -1,7 +1,7 @@
 ﻿<nav>
 	<div class="brand">
 		<div class="link">
-			<a>Gabor</a>
+			<a href="#Profile">Gabor</a>
 		</div>
 	</div>
 	<div class="links">
@@ -12,16 +12,16 @@
 			<a href="#Skills">Skills</a>
 		</div>
 		<div class="link">
-			<a>Education</a>
+			<a href="#Education">Education</a>
 		</div>
 		<div class="link">
-			<a>Experience</a>
+			<a href="#Experience">Experience</a>
 		</div>
 		<div class="link">
-			<a>Projects</a>
+			<a href="#Projects">Projects</a>
 		</div>
 		<div class="link">
-			<a>Contact</a>
+			<a href="#Contact">Contact</a>
 		</div>
 	</div>
 </nav>
@@ -36,7 +36,10 @@
 			top: 0;
 			width: 100vw;
 			height: 5vh;
-      background-color: #3d3c3c;
+      background: rgba(61, 60, 60, 0.82);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(7.4px);
+      -webkit-backdrop-filter: blur(7.4px);
 			z-index: 999999999;
 	}
 
@@ -69,7 +72,6 @@
 			transition: all .3s ease-in-out;
 			&:hover{
 					cursor: pointer;
-					text-decoration: underline solid var(--hl-primary) 1px;
 					text-underline-offset: 5px;
 					color: var(--hl-primary);
       }

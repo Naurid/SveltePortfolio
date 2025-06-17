@@ -8,7 +8,7 @@
 		<h1 class="h2">{title}</h1>
 		<h2>{subtitle}</h2>
 		<p>Click to go to website</p>
-		<img src="{icon}" alt="an image"/>
+		<img src="{icon}" alt="yes"/>
 	</a>
 </div>
 
@@ -17,7 +17,7 @@
     .tvcard-container{
         display: flex;
         justify-content: space-between;
-        width: 100vw;
+        width: 100%;
         &:hover .date-container {
             color: white;
         }

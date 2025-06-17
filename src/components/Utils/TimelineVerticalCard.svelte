@@ -22,7 +22,7 @@
 		.tvcard-container{
 				display: flex;
 				justify-content: space-between;
-				width: 100vw;
+				width: 100%;
 				&:hover .date-container {
 						color: white;
 				}
