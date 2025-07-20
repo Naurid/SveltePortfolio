@@ -4,15 +4,26 @@
     command:
       - "--api.insecure=true"
       - "--providers.docker"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entryPoints,websecure.address=:443"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=gabor@gaborvilics.be"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
     ports:
-      #http port
-      - "80:80"
+      #https port
+      - "443:443"
       #webui
       - "8080:8080"
     volumes:
+      - letsencrypt:/letsencrypt
       - /var/run/docker.sock:/var/run/docker.sock
   svelte-app:
     container_name: svelte-portfolio # Assign a human-readable name to your container
     image: ghcr.io/naurid/svelteportfolio/svelte-portfolio
     labels:
+      - "traefik.enable=true"
       - "traefik.http.routers.svelte-portfolio.rule=Host(`gaborvilics.be`)"
+      - "traefik.http.routers.svelte-portfolio.entrypoints=websecure"
+      - "traefik.http.routers.svelte-portfolio.tls.certresolver=myresolver"
+volumes:
+  letsencrypt:
