@@ -14,3 +14,5 @@
   svelte-app:
     container_name: svelte-portfolio # Assign a human-readable name to your container
     image: ghcr.io/naurid/svelteportfolio/svelte-portfolio
+    labels:
+      - "traefik.http.routers.svelte-portfolio.rule=Host(`gaborvilics.be`)"
