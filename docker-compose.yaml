@@ -5,7 +5,7 @@
       - "--label-enable"
       - "--interval"
       - "60"
-      - "--debug"
+      - "--rolling-restart"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
     env_file:
