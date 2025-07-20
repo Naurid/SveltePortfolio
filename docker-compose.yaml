@@ -1,0 +1,6 @@
+﻿services:
+  svelte-app:
+    container_name: svelte-portfolio # Assign a human-readable name to your container
+    image: ghcr.io/naurid/svelteportfolio/svelte-portfolio
+    ports:
+      - "8080:3000"
