@@ -98,4 +98,30 @@
 	.card-text p{
 			text-align: center;
 	}
+	
+	@media(max-width: 1095px) {
+			.card{
+          &.green {
+              box-shadow: 20px 20px 20px var(--hl-primary);
+          }
+          &.white {
+              box-shadow: 20px 20px 20px #fff;
+          }
+          &.orange {
+              box-shadow: 20px 20px 20px #e77110;
+          }
+          &.yellow {
+              box-shadow: 20px 20px 20px #ebcb2a;
+          }
+          &.blue {
+              box-shadow: 20px 20px 20px #2858ea;
+          }
+          &.purple {
+              box-shadow: 20px 20px 20px #512bd4;
+          }
+          & .card-text{
+              opacity: 1;
+          }
+			}
+	}
 </style>

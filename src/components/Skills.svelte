@@ -39,7 +39,7 @@ import Card from './Utils/Card.svelte';
 	<CardContainer>
 		<Card accentColor="blue" cardTitle="Azure" cardDescription="Able to setup pipelines using Azure" iconUrl="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"/>
 		<Card accentColor="orange" cardTitle="GitLab Pipelines" cardDescription="able to setup deployment pipelines with GitLab pipelines" iconUrl="https://gitlab.com/uploads/-/system/project/avatar/53062200/gitlab-ci-cd.png"/>
-		<Card accentColor="white" cardTitle="GitHub Actions" cardDescription="able to setup deployment pipelines with Github Actions" iconUrl="https://static-00.iconduck.com/assets.00/githubactions-icon-512x512-jbpvj4ny.png"/>
+		<Card accentColor="white" cardTitle="GitHub Actions" cardDescription="able to setup deployment pipelines with Github Actions" iconUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/langfr-250px-GitHub_Invertocat_Logo.svg.png"/>
 	</CardContainer>
 	<h2 class="centered">Version Control</h2>
 	<CardContainer>

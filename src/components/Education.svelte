@@ -3,9 +3,8 @@
 	import Timeline from './Utils/Timeline.svelte';
 	import TimelineVerticalCard from './Utils/TimelineVerticalCard.svelte';
 </script>
-
+<h1	class="h1 centered" id="Education"> Education </h1>
 <SectionContainer>
-	<h1	class="h1 centered" id="Education"> Education </h1>
 	<Timeline/>
 	<TimelineVerticalCard date="2010 - 2016" title="Athénée Royal Jules Destrée de Marcinelle" subtitle="Secondaires" skills={["CESS"]} />
 	<TimelineVerticalCard date="2016 - 2017" title="UMons" subtitle="Premiere année de Médecine" skills={[]}/>

@@ -162,9 +162,12 @@
 </SectionContainer>
 
 <style>
+		form{
+				width: 50%;
+		}
     .form-group {
         margin-bottom: 20px;
-				width: 50%;
+				width: 100%;
 				justify-self: center;
     }
 

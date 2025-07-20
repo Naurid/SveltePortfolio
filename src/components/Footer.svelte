@@ -17,42 +17,44 @@
 <style>
     nav {
         display: flex;
-        justify-content: center; /* Center items horizontally */
-        align-items: center;   /* Center items vertically */
+        justify-content: center;
+        align-items: center;
         position: fixed;
         bottom: 0;
         width: 100%;
-        height: 5vh;
+        height: 6vh;
         background: rgba(61, 60, 60, 0.82);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(7.4px);
         -webkit-backdrop-filter: blur(7.4px);
+        z-index: 10;
     }
 
     .social-links {
         display: flex;
-        gap: 20px; /* Space between icons */
+        gap: 5vw;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
 
     .social-links a {
-        display: flex; /* Make the anchor a flex container to center SVG if needed */
+        display: flex;
         align-items: center;
         justify-content: center;
-        transition: all .3s ease-in-out;
-        /* Remove text styling specific to 'Gabor' name */
-        font-size: initial; /* Reset font size if inherited */
-        font-weight: initial; /* Reset font weight if inherited */
-        padding: 0; /* Remove padding */
+        height: 100%;
+        aspect-ratio: 1 / 1;
     }
 
     .social-icon {
-        height: 7rem; /* Adjust size as needed */
-        width: 7rem; /* Ensure width is same as height for square icons */
+        width: 10vh;
+        height: 10vh;
+        transition: all 0.3s ease-in-out;
     }
 
     .social-links a:hover .social-icon {
-        /* You can add a hover effect here, e.g., make it brighter */
-        filter: brightness(1.2); /* Makes the icon a bit brighter on hover */
-        transform: translateY(-2px); /* Slight lift effect */
+        filter: brightness(1.2);
+        transform: translateY(-2px);
     }
+
 </style>

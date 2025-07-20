@@ -5,11 +5,11 @@
     --card-bg: #C1C1C172;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body, html{
+    margin:0;
+    padding:0;
 }
+
 body{
     font-family: 'Poppins', sans-serif;
     background-color: black;
