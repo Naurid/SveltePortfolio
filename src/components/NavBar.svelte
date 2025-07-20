@@ -1,7 +1,7 @@
 ﻿<nav>
 	<div class="brand">
 		<div class="link">
-			<a href="#Profile">G</a>
+			<a href="#Profile">G | Updated</a>
 		</div>
 	</div>
 	<div class="links">

@@ -6,12 +6,13 @@
       - "--interval"
       - "60"
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - "/var/run/docker.sock:/var/run/docker.sock"
     env_file:
       - ./.env
     environment:
       - REPO_USER=${REPO_USER}
-        # This points to the file where the secret (your PAT) is mounted
+      # IMPORTANT: Replace YOUR_PAT_VALUE_HERE with your actual PAT.
+      # This is less secure and for testing purposes only.
       - REPO_PASS=${PAT}
   reverse-proxy:
     image: traefik:v3.1
@@ -35,10 +36,13 @@
       - "8080:8080"
     volumes:
       - letsencrypt:/letsencrypt
-      - /var/run/docker.sock:/var/run/docker.sock
+      - "/var/run/docker.sock:/var/run/docker.sock"
   svelte-app:
-    container_name: svelte-portfolio
     image: ghcr.io/naurid/svelteportfolio/svelte-portfolio:prod
+    deploy:
+      replicas: 2
+      restart_policy:
+          condition: on-failure
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.svelte-portfolio.rule=Host(`gaborvilics.be`)"
@@ -47,3 +51,7 @@
       - "com.centurylinklabs.watchtower.enable=true"
 volumes:
   letsencrypt:
+secrets:
+  ghcr_pat_secret:
+    file: ./ghcr_pat.txt
+
