@@ -1,4 +1,12 @@
 ﻿services:
+  watchtower:
+    image: containrrr/watchtower
+    command:
+      - "--label-enable"
+      - "--interval"
+      - "60"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
   reverse-proxy:
     image: traefik:v3.1
     command:
@@ -24,11 +32,12 @@
       - /var/run/docker.sock:/var/run/docker.sock
   svelte-app:
     container_name: svelte-portfolio
-    image: ghcr.io/naurid/svelteportfolio/svelte-portfolio
+    image: ghcr.io/naurid/svelteportfolio/svelte-portfolio:prod
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.svelte-portfolio.rule=Host(`gaborvilics.be`)"
       - "traefik.http.routers.svelte-portfolio.entrypoints=websecure"
       - "traefik.http.routers.svelte-portfolio.tls.certresolver=myresolver"
+      - "com.centurylinklabs.watchtower.enable=true"
 volumes:
   letsencrypt:
