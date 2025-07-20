@@ -5,6 +5,7 @@
       - "--label-enable"
       - "--interval"
       - "60"
+      - "--debug"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
     env_file:
@@ -28,11 +29,8 @@
       - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
       - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
     ports:
-      #http port
       - "80:80"
-      #https port
       - "443:443"
-      #webui
       - "8080:8080"
     volumes:
       - letsencrypt:/letsencrypt
@@ -51,7 +49,3 @@
       - "com.centurylinklabs.watchtower.enable=true"
 volumes:
   letsencrypt:
-secrets:
-  ghcr_pat_secret:
-    file: ./ghcr_pat.txt
-
