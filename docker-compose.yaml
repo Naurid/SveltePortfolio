@@ -1,6 +1,16 @@
 ﻿services:
+  reverse-proxy:
+    image: traefik:v3.1
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker"
+    ports:
+      #http port
+      - "80:80"
+      #webui
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
   svelte-app:
     container_name: svelte-portfolio # Assign a human-readable name to your container
     image: ghcr.io/naurid/svelteportfolio/svelte-portfolio
-    ports:
-      - "8080:3000"
