@@ -1,7 +1,7 @@
 ﻿<nav>
 	<div class="brand">
 		<div class="link">
-			<a href="#Profile">Gabor</a>
+			<a href="#Profile">G</a>
 		</div>
 	</div>
 	<div class="links">
