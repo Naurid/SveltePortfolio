@@ -1,7 +1,7 @@
 ﻿# Stage 1: Builder
 # Use an Alpine-based Node.js image for a smaller base
 FROM node:22-alpine AS builder
-
+LABEL build_time=${BUILD_TIME}
 # Install git for cloning the repository
 # Using apk add for Alpine Linux instead of apt
 RUN apk add --no-cache git

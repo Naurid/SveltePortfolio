@@ -203,7 +203,7 @@
 
     button {
         display: block;
-        width: 25%;
+        width: 50%;
 				justify-self: center;
         padding: 12px 20px;
         background-color: var(--hl-primary);
