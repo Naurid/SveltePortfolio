@@ -1,5 +1,6 @@
 ﻿# Stage 1: Builder
 # Use an Alpine-based Node.js image for a smaller base
+ARG BUILD_TIME
 FROM node:22-alpine AS builder
 LABEL build_time=${BUILD_TIME}
 # Install git for cloning the repository
