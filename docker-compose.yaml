@@ -25,6 +25,7 @@
       - "/var/run/docker.sock:/var/run/docker.sock"
     networks:
       - traefik_net
+
   svelte-app:
     image: ghcr.io/naurid/svelteportfolio/svelte-portfolio:prod
     deploy:
@@ -36,6 +37,9 @@
       - "traefik.http.routers.svelte-portfolio.rule=Host(`gaborvilics.be`)"
       - "traefik.http.routers.svelte-portfolio.entrypoints=websecure"
       - "traefik.http.routers.svelte-portfolio.tls.certresolver=myresolver"
+    networks:
+      - traefik_net
+
 volumes:
   letsencrypt:
 networks:
