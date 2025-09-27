@@ -21,7 +21,7 @@
       - "traefik.http.routers.dashboard.service=dashboard@internal"
       - "traefik.http.routers.dashboard.entrypoints=websecure"
       - "traefik.http.routers.dashboard.tls.certresolver=myresolver"
-      - "traefik.http.routers.dashboard-api.rule=Host(`traefik.gaborvilics.be`) && PathPrefix(`/api`)"
+      - "traefik.http.routers.dashboard-api.rule=Host(`traefik.gaborvilics.be`),PathPrefix(`/api`)"
       - "traefik.http.routers.dashboard-api.service=api@internal"
       - "traefik.http.routers.dashboard-api.entrypoints=websecure"
       - "traefik.http.routers.dashboard-api.tls.certresolver=myresolver"
