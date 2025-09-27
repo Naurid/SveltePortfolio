@@ -25,7 +25,7 @@
       - "traefik.http.routers.dashboard-api.service=api@internal"
       - "traefik.http.routers.dashboard-api.entrypoints=websecure"
       - "traefik.http.routers.dashboard-api.tls.certresolver=myresolver"
-      - "traefik.http.middlewares.dashboard-auth.basicauth.users=admin:$apr1$evdz0uhy$Q6CX9xf.vcnjbSjQoAMqh."
+      - "traefik.http.middlewares.dashboard-auth.basicauth.users=admin:$$apr1$$evdz0uhy$$Q6CX9xf.vcnjbSjQoAMqh."
       - "traefik.http.routers.dashboard.middlewares=dashboard-auth"
       - "traefik.http.routers/dashboard-api.middlewares=dashboard-auth"
     ports:
