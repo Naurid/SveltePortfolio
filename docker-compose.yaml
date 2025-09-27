@@ -32,10 +32,6 @@
 
   svelte-app:
     image: ghcr.io/naurid/svelteportfolio/svelte-portfolio:prod
-    deploy:
-      replicas: 2
-      restart_policy:
-          condition: on-failure
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.svelte-portfolio.rule=Host(`gaborvilics.be`)"
