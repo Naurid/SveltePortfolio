@@ -37,7 +37,6 @@
       - traefik_net
 
   svelte-app:
-    image: ghcr.io/naurid/svelteportfolio/svelte-portfolio:prod
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.svelte-portfolio.rule=Host(`gaborvilics.be`)"
