@@ -2,7 +2,7 @@
   reverse-proxy:
     image: traefik:v3.1
     command:
-      - "--log.level=INFO"
+      - "--log.level=DEBUG"
       - "--api.dashboard=true"
       - "--api=true"
       - "--api.insecure=false"
